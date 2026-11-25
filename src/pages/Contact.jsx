@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm.jsx'
+import { contactEmail } from '../data/profile.js'
 import '../styles/contact.css'
 
 const collaborationInterests = [
@@ -19,6 +20,7 @@ export default function Contact() {
           <h1>Contact Me</h1>
           <p className="page-subtitle">Let's Connect and Explore Opportunities</p>
           <p>I am always open to meaningful conversations, professional networking and opportunities for collaboration. Whether you are interested in technology entrepreneurship, business innovation, financial technology, data analytics or intelligent digital solutions, I would be happy to connect with you.</p>
+          <p>Email me at <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
         </header>
         <section className="collaboration">
           <h2>Let's Work Together</h2>

@@ -1,3 +1,5 @@
+export const contactEmail = 'tawiahmaxi19@gmail.com'
+
 export const education = [
   {
     "title": "Master's in IT Innovations in Business",

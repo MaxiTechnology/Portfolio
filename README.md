@@ -83,7 +83,7 @@ The contact form demonstrates React state management, input validation and front
 
 **Maxwell Tawiah**
 
-Techpreneur | Founder & CEO, MAXI TECHNOLOGY
+Technopreneur
 
 Master's Student — IT Innovations in Business, Ural Federal University
 
