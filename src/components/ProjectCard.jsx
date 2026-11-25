@@ -1,5 +1,7 @@
+import githubMark from '../assets/github-mark.svg'
+
 export default function ProjectCard({ project }) {
-  const { title, category, status, description, technologies, link } = project
+  const { title, category, status, description, technologies, githubUrl, demoUrl } = project
 
   return (
     <article className="card project-card">
@@ -16,12 +18,19 @@ export default function ProjectCard({ project }) {
             {technologies.map(technology => <li key={technology}>{technology}</li>)}
           </ul>
         </div>
-        {link && (
-          <a className="button secondary project-repository" href={link.url}
-            aria-label={`${link.label} for ${title}`}>
-            {link.label}
+        <div className="project-actions">
+          {demoUrl && (
+            <a className="button secondary" href={demoUrl} aria-label={`Open project demo for ${title}`}>
+              Open project demo
+            </a>
+          )}
+          <a className="button secondary project-repository" href={githubUrl}
+            target="_blank" rel="noopener noreferrer"
+            aria-label={`View on GitHub: ${title} (opens in a new tab)`}>
+            <img src={githubMark} width="20" height="20" alt="" />
+            View on GitHub
           </a>
-        )}
+        </div>
       </div>
     </article>
   )

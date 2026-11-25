@@ -11,8 +11,7 @@ export default function Home() {
           <h1 id="intro-title">Maxwell Tawiah</h1>
           <p className="headline">Technopreneur</p>
           <p className="hero-description">
-            I founded MAXI TECHNOLOGY and study IT Innovations in Business at Ural Federal University.
-            My projects explore how data can help people make decisions in public services and finance.
+            Bridging business, technology and innovation to develop practical solutions for real-world challenges.
           </p>
           <div className="actions">
             <Link className="button primary" to="/projects">
@@ -22,10 +21,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portrait-frame">
-          <img className="portrait" src={`${import.meta.env.BASE_URL}Maxi.jpeg`}
-            width="796" height="1080" alt="Portrait of Maxwell Tawiah" />
-        </div>
+        <img className="portrait" src={`${import.meta.env.BASE_URL}Maxi.jpeg`}
+          width="796" height="1080" alt="Portrait of Maxwell Tawiah" />
       </section>
 
       <section className="expertise" aria-labelledby="expertise-title">
