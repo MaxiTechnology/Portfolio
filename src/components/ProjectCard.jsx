@@ -1,3 +1,5 @@
+import githubMark from '../assets/github-mark.svg'
+
 function TechnologyList({ heading, items }) {
   if (items.length === 0) return null
 
@@ -21,6 +23,16 @@ export default function ProjectCard({ project }) {
       </header>
       <div className="project-details">
         <p>{project.description}</p>
+        {project.githubUrl ? (
+          <a className="button secondary project-repository"
+            href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+            aria-label={`View on GitHub: ${project.title} (opens in a new tab)`}>
+            <img src={githubMark} width="20" height="20" alt="" />
+            View on GitHub
+          </a>
+        ) : (
+          <span>Repository link coming soon.</span>
+        )}
         <div>
           <h3>{project.featureHeading}</h3>
           <ul className="feature-list">
@@ -29,13 +41,6 @@ export default function ProjectCard({ project }) {
         </div>
         <TechnologyList heading="Technologies used" items={project.technologies} />
         <TechnologyList heading="Planned technologies and methods" items={project.plannedTechnologies} />
-        <div className="project-repository">
-          {project.githubUrl ? (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">View GitHub repository</a>
-          ) : (
-            <span>Repository link coming soon.</span>
-          )}
-        </div>
       </div>
     </article>
   )

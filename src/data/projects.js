@@ -23,7 +23,7 @@ export const projects = [
       "Artificial Intelligence",
       "Multi-Criteria Decision-Making"
     ],
-    "githubUrl": ""
+    "githubUrl": "https://github.com/MaxiTechnology/CIVIC-DESK/tree/vercel-compatible"
   },
   {
     "id": "supplier-smart",
@@ -51,7 +51,7 @@ export const projects = [
       "AHP",
       "TOPSIS"
     ],
-    "githubUrl": ""
+    "githubUrl": "https://github.com/MaxiTechnology/SDSS"
   },
   {
     "id": "portfolio",
@@ -79,6 +79,6 @@ export const projects = [
       "Git"
     ],
     "plannedTechnologies": [],
-    "githubUrl": ""
+    "githubUrl": "https://github.com/MaxiTechnology/Portfolio"
   }
 ]
