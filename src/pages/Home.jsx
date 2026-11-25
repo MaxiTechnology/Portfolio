@@ -11,11 +11,12 @@ export default function Home() {
           <h1 id="intro-title">Maxwell Tawiah</h1>
           <p className="headline">Technopreneur</p>
           <p className="hero-description">
-            Bridging business, technology and innovation to develop practical solutions for real-world challenges.
+            I founded MAXI TECHNOLOGY and study IT Innovations in Business at Ural Federal University.
+            My projects explore how data can help people make decisions in public services and finance.
           </p>
           <div className="actions">
             <Link className="button primary" to="/projects">
-              View My Projects <span aria-hidden="true">→</span>
+              View My Projects
             </Link>
             <Link className="button secondary" to="/contact">Contact Me</Link>
           </div>

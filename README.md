@@ -2,6 +2,11 @@
 
 This is a responsive personal portfolio website developed using React as part of the Web Technologies in Business course at Ural Federal University. The website presents my professional identity as a technology entrepreneur, Founder and CEO of MAXI TECHNOLOGY, educational background, professional experience, technical skills and academic projects.
 
+## Assignment submission
+
+- [GitHub repository](https://github.com/MaxiTechnology/Portfolio)
+- [Live portfolio on Vercel](https://personalportfolio-nine-delta.vercel.app/)
+
 ## Project objectives
 
 Build a React application with reusable components, React Router navigation, professional CSS styling, responsive layouts, and form state and validation. Use Git to track changes and GitHub to share the source for assessment.
@@ -18,7 +23,7 @@ Build a React application with reusable components, React Router navigation, pro
 ## Features
 
 - Four pages share a navigation bar and footer. Links switch pages through React Router, and a hamburger menu provides navigation on small screens.
-- The homepage pairs a short introduction and portrait with three areas of expertise. Project cards show objectives, status, and implemented or planned technologies.
+- The homepage pairs a short introduction and portrait with three areas of expertise. Each project card describes its purpose, status and technologies, with a public demo or source link when available.
 - CSS Grid and Flexbox adapt the layouts to the screen. Interactive elements have hover and keyboard focus styles, with reduced-motion support for transitions.
 - The contact form validates the visitor's name, email and message, focuses the first invalid field, and preserves input for correction.
 
@@ -32,7 +37,7 @@ HTML5, CSS3, JavaScript with JSX, React, React DOM, React Router, Vite, npm and 
 public/
   favicon.svg                   MT browser tab icon
 src/
-  assets/                       Reserved for personal images
+  assets/                       Local graphics
   components/                   Shared navigation, cards and contact form
     Navbar.jsx, Footer.jsx, HighlightCard.jsx, ProjectCard.jsx, ContactForm.jsx
   pages/                        One component per route
@@ -56,9 +61,11 @@ README.md                       Project and setup guide
 
 Install Node.js and npm. The project's Vite version supports Node.js 20.19 or later in the 20.x series, or Node.js 22.12 or later. Git is needed to clone the repository.
 
-Until the public repository is available, open a terminal in the project folder containing `package.json` and run:
+To run a fresh copy locally, use the following commands.
 
 ```sh
+git clone https://github.com/MaxiTechnology/Portfolio.git
+cd Portfolio
 npm ci
 npm run dev
 ```
@@ -75,9 +82,9 @@ npm run preview
 
 Lint checks the source for common mistakes. The build writes optimized files to `dist/`. Preview serves that build locally at the printed URL so you can test the result.
 
-## Contact form limitation
+## Contact form
 
-The contact form demonstrates React state management, input validation and frontend submission feedback. It does not use a backend or email delivery service. Messages are not transmitted or permanently stored.
+React validates the name, email and message, then creates a prefilled email link. The visitor can edit the form, open the draft in their configured email app and send it there. A visible email address also supports visitors who use webmail. The form keeps entries in component state and requires no backend.
 
 ## Author
 

@@ -1,15 +1,16 @@
 import { useState } from 'react'
+import { contactEmail } from '../data/profile.js'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
-  const [successMessage, setSuccessMessage] = useState('')
+  const [draftUrl, setDraftUrl] = useState('')
 
   function clearFeedback() {
     setError('')
-    setSuccessMessage('')
+    setDraftUrl('')
   }
 
   function handleSubmit(event) {
@@ -39,19 +40,17 @@ export default function ContactForm() {
       return
     }
 
-    // Validation is complete. Clear the temporary input values.
-    setName('')
-    setEmail('')
-    setMessage('')
-    setSuccessMessage('Thank you for completing the contact form. Your information has been validated successfully. This portfolio currently uses a demonstration contact form, so your message has not been sent.')
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name.trim()}`)
+    const body = encodeURIComponent(`${message.trim()}\r\n\r\n${name.trim()}\r\nReply to: ${email.trim()}`)
+    setDraftUrl(`mailto:${contactEmail}?subject=${subject}&body=${body}`)
   }
 
   return (
     <form className="card contact-form" aria-labelledby="form-title"
       onSubmit={handleSubmit} onChange={clearFeedback} noValidate>
       <div>
-        <h2 id="form-title">Send Me a Message</h2>
-        <p>Fill in the form below to introduce yourself, share an idea or express your interest in collaborating.</p>
+        <h2 id="form-title">Write to Maxwell</h2>
+        <p>Prepare a draft here, then open it in your email app to review and send.</p>
       </div>
       <div className="contact-field">
         <label htmlFor="full-name">Full Name</label>
@@ -72,10 +71,9 @@ export default function ContactForm() {
           onChange={event => setMessage(event.target.value)} />
       </div>
       <div>
-        <p className="form-note">This contact form is a frontend demonstration. Messages are not currently delivered by email.</p>
-        <button className="button primary" type="submit">Submit Message</button>
+        <button className="button primary" type="submit">Prepare email draft</button>
         <div role="alert">{error && <p className="form-error">{error}</p>}</div>
-        <div role="status">{successMessage && <p className="form-success">{successMessage}</p>}</div>
+        <div role="status">{draftUrl && <p className="form-success">Your draft is ready. <a href={draftUrl}>Open in email app</a></p>}</div>
       </div>
     </form>
   )

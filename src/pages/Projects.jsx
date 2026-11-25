@@ -7,8 +7,8 @@ export default function Projects() {
     <>
       <header className="projects-intro">
         <h1>My Projects</h1>
-        <p className="page-subtitle">Building Innovative Solutions Through Business and Technology</p>
-        <p>Explore my academic and personal projects, which demonstrate my growing experience in web development, artificial intelligence, data analytics and intelligent decision support systems. These projects reflect my entrepreneurial mindset and commitment to applying technology to practical business and organizational challenges.</p>
+        <p className="page-subtitle">Decision support and web development</p>
+        <p>Two of my academic projects explore how to make a ranking understandable to the person using it. The third is the portfolio you’re reading.</p>
       </header>
       <div className="project-grid">
         {projects.map(project => <ProjectCard key={project.id} project={project} />)}

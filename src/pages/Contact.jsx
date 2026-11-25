@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm.jsx'
+import { contactEmail } from '../data/profile.js'
 import '../styles/contact.css'
 
 const collaborationInterests = [
@@ -17,13 +18,11 @@ export default function Contact() {
       <div>
         <header>
           <h1>Contact Me</h1>
-          <p className="page-subtitle">Let's Connect and Explore Opportunities</p>
-          <p>I am always open to meaningful conversations, professional networking and opportunities for collaboration. Whether you are interested in technology entrepreneurship, business innovation, financial technology, data analytics or intelligent digital solutions, I would be happy to connect with you.</p>
+          <p className="page-subtitle">Have a project in mind?</p>
+          <p>I welcome questions about my work and ideas for collaboration. You can reach me at <a href={`mailto:${contactEmail}`}>{contactEmail}</a> or use the form to prepare a message.</p>
         </header>
         <section className="collaboration">
-          <h2>Let's Work Together</h2>
-          <p>As a technology entrepreneur and Founder &amp; CEO of MAXI TECHNOLOGY, I welcome opportunities to exchange ideas, build professional relationships and collaborate on innovative business and technology solutions.</p>
-          <h3>Areas of collaboration</h3>
+          <h2>Areas of collaboration</h2>
           <ul className="interest-list">
             {collaborationInterests.map(interest => <li key={interest}>{interest}</li>)}
           </ul>

@@ -30,10 +30,7 @@ export default function About() {
       <section className="about-intro">
         <h1>About Me</h1>
         <p className="page-subtitle">Bridging Business, Finance, Data, Technology and Entrepreneurship</p>
-        <p>I am Maxwell Tawiah, a technology entrepreneur, Founder and CEO of MAXI TECHNOLOGY, and a master's student in IT Innovations in Business at Ural Federal University.</p>
-        <p>My academic background in accounting and social change communication, combined with professional experience in financial management, data analytics, information technology and entrepreneurship, has shaped my multidisciplinary approach to solving business and organizational challenges.</p>
-        <p>I am passionate about leveraging artificial intelligence, data-driven technologies, financial technology and innovative information systems to improve decision-making, enhance business efficiency and support digital transformation.</p>
-        <p>My ambition is to build innovative technology-driven businesses that deliver practical solutions, create sustainable value and contribute to economic and technological development.</p>
+        <p>My background is in accounting and social change communication. I lead MAXI TECHNOLOGY and study IT Innovations in Business at Ural Federal University. My experience in financial management and IT support sparked my interest in decision-support systems. I use SQL, Python and Power BI for data analysis and React to build web interfaces.</p>
       </section>
 
       <BackgroundSection heading="Education" entries={education} />
