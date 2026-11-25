@@ -67,7 +67,7 @@ export const projects = [
       "Professional responsive design.",
       "Entrepreneurial and professional profile.",
       "CSS Flexbox and Grid layouts.",
-      "Contact form functionality planned for Stage 4."
+      "Frontend contact form with input validation and submission feedback."
     ],
     "technologies": [
       "React",
