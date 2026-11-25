@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A four-page portfolio for the Web Technologies in Business course. Stage 1 sets up the shared layout and navigation. Each page contains placeholder text for later stages.
+A four-page portfolio for the Web Technologies in Business course. The Home page introduces Maxwell Tawiah and his professional interests. About Me, Projects and Contact provide placeholders for later stages.
 
 ## Technologies
 

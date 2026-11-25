@@ -1,0 +1,49 @@
+.hero { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
+.greeting { margin: 0 0 0.6rem; color: var(--accent); font-size: 1.2rem; font-weight: 650; }
+.headline { color: var(--primary); font-weight: 600; font-size: clamp(1.1rem, 1.45vw, 1.35rem); line-height: 1.5; }
+
+/* The grid and circular border frame the initials without an image file. */
+.portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1.22;
+  border-radius: 1.25rem;
+  background-color: #153f98;
+  background-image: linear-gradient(90deg, #ffffff0d 1px, transparent 1px),
+    linear-gradient(#ffffff0d 1px, transparent 1px), linear-gradient(145deg, #11234a, #245bd3);
+  background-size: 32px 32px, 32px 32px, cover;
+}
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 57%;
+  aspect-ratio: 1;
+  border: 1px solid #ffffff73;
+  border-radius: 50%;
+  box-shadow: 0 0 0 14px #ffffff08, 0 0 0 15px #ffffff26;
+  color: white;
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 750;
+  letter-spacing: -0.085em;
+  padding-right: 0.085em;
+}
+.highlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.6rem; }
+.interests { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+.interest-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 0; padding: 0; }
+.interest-list li { padding: 0.4rem 0.9rem; border: 1px solid var(--border); border-radius: 2rem; background: var(--surface); font-weight: 500; transition: border-color 180ms; }
+.interest-list li:hover { border-color: #abc4f4; }
+.connect { padding: clamp(1.5rem, 4vw, 3.5rem); border-radius: 1rem; background: var(--tint); }
+.connect h2, .connect p { max-width: 48rem; }
+@media (max-width: 768px) {
+  .hero, .interests { grid-template-columns: 1fr; gap: 2rem; }
+  .portrait { max-width: 32rem; justify-self: center; aspect-ratio: 1.8; }
+  .monogram { width: 36%; }
+  .highlight-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+}
+@media (max-width: 480px) {
+  .actions .button { flex: 1 1 auto; }
+  .monogram { font-size: 3.25rem; }
+}
