@@ -23,7 +23,7 @@ export default function Navbar() {
         <nav id="main-nav" aria-label="Main navigation"
           className={isMenuOpen ? 'nav-links open' : 'nav-links'}>
           <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
-          <NavLink to="/about" onClick={closeMenu}>About Me</NavLink>
+          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
           <NavLink to="/projects" onClick={closeMenu}>Projects</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
         </nav>

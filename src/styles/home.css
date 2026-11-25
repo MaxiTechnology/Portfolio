@@ -1,45 +1,69 @@
-.hero { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
-.greeting { margin: 0 0 0.6rem; color: var(--accent); font-size: 1.2rem; font-weight: 650; }
-.headline { color: var(--primary); font-weight: 600; font-size: clamp(1.1rem, 1.45vw, 1.35rem); line-height: 1.5; }
-
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  max-width: 68rem;
+  margin-inline: auto;
+}
+.greeting { margin: 0 0 0.65rem; color: var(--muted); font-size: 1.15rem; }
+.hero h1 {
+  font-size: clamp(3rem, 6.3vw, 5.7rem);
+  letter-spacing: -0.065em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.headline {
+  margin-top: 0.7rem;
+  color: var(--accent);
+  font: italic clamp(1.7rem, 3vw, 2.65rem)/1.2 Georgia, serif;
+}
+.hero-description { max-width: 43ch; margin-top: 1.35rem; font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+.hero .button { gap: 0.8rem; padding-inline: 1.25rem; }
 .portrait {
+  width: min(100%, 22rem);
+  height: auto;
+  justify-self: center;
+  border-radius: 0.9rem;
+  box-shadow: 8px 8px 0 #e3ecfc;
+}
+.expertise {
+  max-width: 68rem;
+  margin: clamp(2.5rem, 5vw, 4.5rem) auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.expertise h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+.expertise-list li { display: flex; align-items: center; gap: 0.8rem; font-weight: 600; }
+.expertise-icon {
   display: grid;
   place-items: center;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 1.22;
-  border-radius: 1.25rem;
-  background-color: #153f98;
-  background-image: linear-gradient(90deg, #ffffff0d 1px, transparent 1px),
-    linear-gradient(#ffffff0d 1px, transparent 1px), linear-gradient(145deg, #11234a, #245bd3);
-  background-size: 32px 32px, 32px 32px, cover;
+  flex: 0 0 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.6rem;
+  background: #e8effc;
+  color: var(--accent);
 }
-.portrait img {
-  display: block;
-  width: 57%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center 83%;
-  border: 1px solid #ffffff73;
-  border-radius: 50%;
-  box-shadow: 0 0 0 14px #ffffff08, 0 0 0 15px #ffffff26;
-}
-.highlight-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.6rem; }
-.interests { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
-.connect { padding: clamp(1.5rem, 4vw, 3.5rem); border-radius: 1rem; background: var(--tint); }
-.connect h2, .connect p { max-width: 48rem; }
-.specialties { font-weight: 500; margin-top: 0.4rem; }
-@media (max-width: 1100px) {
-  .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+.expertise-icon svg {
+  width: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 @media (max-width: 768px) {
-  .hero, .interests { grid-template-columns: 1fr; gap: 2rem; }
-  .portrait { max-width: 32rem; justify-self: center; aspect-ratio: 1.8; }
-  .portrait img { width: 36%; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .portrait { width: min(95%, 19rem); }
 }
-@media (max-width: 600px) {
-  .highlight-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .actions .button { flex: 1 1 auto; }
+@media (max-width: 640px) {
+  .expertise-list { grid-template-columns: 1fr; gap: 0.8rem; }
 }

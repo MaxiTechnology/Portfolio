@@ -18,7 +18,7 @@ Build a React application with reusable components, React Router navigation, pro
 ## Features
 
 - Four pages share a navigation bar and footer. Links switch pages through React Router, and a hamburger menu provides navigation on small screens.
-- Reusable highlight cards introduce professional interests. Project cards show objectives, status, and implemented or planned technologies.
+- The homepage pairs a short introduction and portrait with three areas of expertise. Project cards show objectives, status, and implemented or planned technologies.
 - CSS Grid and Flexbox adapt the layouts to the screen. Interactive elements have hover and keyboard focus styles, with reduced-motion support for transitions.
 - The contact form validates the visitor's name, email and message, focuses the first invalid field, and preserves input for correction.
 
@@ -89,7 +89,7 @@ Master's Student — IT Innovations in Business, Ural Federal University
 
 ## Deployment
 
-Public website deployment is planned for Stage 6.
+The [live portfolio](https://personalportfolio-nine-delta.vercel.app/) is deployed on Vercel. The rewrites in `vercel.json` let visitors open or refresh the About, Projects and Contact pages directly.
 
 ## Academic purpose
 

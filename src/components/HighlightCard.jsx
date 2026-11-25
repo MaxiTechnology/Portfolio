@@ -1,9 +1,8 @@
-export default function HighlightCard({ title, description, children }) {
+export default function HighlightCard({ title, children }) {
   return (
-    <article className="card highlight-card">
-      <span className="card-icon" aria-hidden="true">{children}</span>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </article>
+    <li>
+      <span className="expertise-icon" aria-hidden="true">{children}</span>
+      {title}
+    </li>
   )
 }
