@@ -29,9 +29,11 @@ export default function Home() {
             <Link className="button secondary" to="/contact">Contact Me</Link>
           </div>
         </div>
-        {/* Replace this initials panel with a portrait from src/assets when available. */}
-        <div className="portrait" aria-hidden="true">
-          <span className="monogram">MT</span>
+        <div className="portrait">
+          <img
+            src={`${import.meta.env.BASE_URL}Maxi.jpeg`}
+            alt="Portrait of Maxwell Tawiah"
+          />
         </div>
       </section>
 

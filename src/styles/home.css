@@ -2,9 +2,7 @@
 .greeting { margin: 0 0 0.6rem; color: var(--accent); font-size: 1.2rem; font-weight: 650; }
 .headline { color: var(--primary); font-weight: 600; font-size: clamp(1.1rem, 1.45vw, 1.35rem); line-height: 1.5; }
 
-/* The grid and circular border frame the initials without an image file. */
 .portrait {
-  position: relative;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -16,19 +14,15 @@
     linear-gradient(#ffffff0d 1px, transparent 1px), linear-gradient(145deg, #11234a, #245bd3);
   background-size: 32px 32px, 32px 32px, cover;
 }
-.monogram {
-  display: grid;
-  place-items: center;
+.portrait img {
+  display: block;
   width: 57%;
   aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 83%;
   border: 1px solid #ffffff73;
   border-radius: 50%;
   box-shadow: 0 0 0 14px #ffffff08, 0 0 0 15px #ffffff26;
-  color: white;
-  font-size: clamp(4rem, 7vw, 7rem);
-  font-weight: 750;
-  letter-spacing: -0.085em;
-  padding-right: 0.085em;
 }
 .highlight-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.6rem; }
 .interests { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
@@ -41,12 +35,11 @@
 @media (max-width: 768px) {
   .hero, .interests { grid-template-columns: 1fr; gap: 2rem; }
   .portrait { max-width: 32rem; justify-self: center; aspect-ratio: 1.8; }
-  .monogram { width: 36%; }
+  .portrait img { width: 36%; }
 }
 @media (max-width: 600px) {
   .highlight-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .actions .button { flex: 1 1 auto; }
-  .monogram { font-size: 3.25rem; }
 }
