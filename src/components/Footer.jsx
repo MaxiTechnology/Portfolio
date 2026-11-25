@@ -20,6 +20,17 @@ export default function Footer() {
           <nav className="footer-social" aria-labelledby="social-title">
             <h2 id="social-title">Connect with Me</h2>
             <div className="social-links">
+              <a href={`mailto:${contactEmail}`} aria-label={`Email Maxwell at ${contactEmail}`} title={contactEmail}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.5" y="5" width="19" height="14" rx="2" />
+                  <path d="m3.5 6 8.5 7 8.5-7" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/maxwellta13/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" stroke="none" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8v-4.64c0-1.11-.02-2.53-1.54-2.53-1.54 0-1.78 1.2-1.78 2.45v4.72H9.53V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.8-1.52 2.99 0 3.55 1.97 3.55 4.53v5.24Z" />
+                </svg>
+              </a>
               <a href="https://wa.me/message/VPO6TZCCQGORC1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (opens in a new tab)" title="WhatsApp">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4.6 17.4A9.1 9.1 0 1 1 8 20.2L3 21.5z" />
@@ -41,12 +52,6 @@ export default function Footer() {
               <a href="https://www.facebook.com/share/18XSFLjBVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" title="Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" stroke="none" d="M13.8 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8h1.9V2.4c-.7-.1-1.7-.2-2.7-.2-2.8 0-4.8 1.7-4.8 4.9v2.4H7V13h3v9z" />
-                </svg>
-              </a>
-              <a href={`mailto:${contactEmail}`} aria-label={`Email Maxwell at ${contactEmail}`} title={contactEmail}>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="2.5" y="5" width="19" height="14" rx="2" />
-                  <path d="m3.5 6 8.5 7 8.5-7" />
                 </svg>
               </a>
             </div>

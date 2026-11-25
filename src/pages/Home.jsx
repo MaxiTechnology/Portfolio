@@ -22,9 +22,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* The original dimensions keep space for the portrait while it loads. */}
-        <img className="portrait" src={`${import.meta.env.BASE_URL}Maxi.jpeg`}
-          width="796" height="1080" alt="Portrait of Maxwell Tawiah" />
+        <div className="portrait-frame">
+          <img className="portrait" src={`${import.meta.env.BASE_URL}Maxi.jpeg`}
+            width="796" height="1080" alt="Portrait of Maxwell Tawiah" />
+        </div>
       </section>
 
       <section className="expertise" aria-labelledby="expertise-title">

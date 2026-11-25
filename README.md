@@ -84,7 +84,7 @@ Lint checks the source for common mistakes. The build writes optimized files to 
 
 ## Contact form
 
-React validates the name, email and message, then creates a prefilled email link. The visitor can edit the form, open the draft in their configured email app and send it there. A visible email address also supports visitors who use webmail. The form keeps entries in component state and requires no backend.
+React validates the name, email and message, then creates a prefilled email link. The visitor can edit the form, open the draft in their configured email app and send it there. The shared footer provides direct email and LinkedIn links alongside the other contact platforms. The form keeps entries in component state and requires no backend.
 
 ## Author
 
