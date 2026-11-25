@@ -56,3 +56,8 @@ a, button { transition: background-color 180ms, color 180ms, border-color 180ms;
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0s !important; }
 }
+
+.page-subtitle { color: var(--primary); font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 600; line-height: 1.4; }
+.interest-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 0; padding: 0; }
+.interest-list li { padding: 0.4rem 0.9rem; border: 1px solid var(--border); border-radius: 2rem; background: var(--surface); font-weight: 500; transition: border-color 180ms; }
+.interest-list li:hover { border-color: #abc4f4; }

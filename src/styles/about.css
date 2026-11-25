@@ -1,0 +1,24 @@
+.about-intro, .career-vision p, .company-panel > p { max-width: 76ch; }
+.background-list, .skills-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.background-card, .skill-card { padding: clamp(1.25rem, 3vw, 2rem); }
+.background-card { display: grid; grid-template-columns: minmax(12rem, 1fr) 3fr; gap: 1.5rem; }
+.entry-date, .entry-result { color: var(--accent); font-weight: 600; }
+.background-card p, .company-panel .entry-date { margin-top: 0.4rem; }
+.organization { color: var(--primary); font-weight: 600; }
+.company-panel {
+  background: var(--tint);
+  border-left: 4px solid var(--accent);
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  margin-top: 1.5rem;
+}
+.company-panel h3 { font-size: 1.6rem; }
+.business-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+.business-columns h4 { margin: 0; font-size: 1.05rem; }
+.business-columns ul, .skill-card ul { margin: 0.75rem 0 0; padding-left: 1.25rem; }
+.skills-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.career-vision .interest-list { margin-top: 1.5rem; }
+@media (max-width: 768px) {
+  .business-columns, .background-card { grid-template-columns: 1fr; }
+  .background-card { gap: 0.6rem; }
+}

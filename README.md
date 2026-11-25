@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A four-page portfolio for the Web Technologies in Business course. The Home page introduces Maxwell Tawiah and his professional interests. About Me, Projects and Contact provide placeholders for later stages.
+A four-page portfolio for the Web Technologies in Business course. The portfolio introduces Maxwell Tawiah, Founder and CEO of MAXI TECHNOLOGY, and presents his background and projects. The Contact page is reserved for a later stage.
 
 ## Technologies
 

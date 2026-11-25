@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-row">
           <div>
             <strong>Maxwell Tawiah</strong>
-            <p>Exploring the intersection of business, data and technology.</p>
+            <p>Techpreneur and business technology enthusiast exploring the intersection of business, finance, data and innovation.</p>
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
             <Link to="/">Home</Link>
